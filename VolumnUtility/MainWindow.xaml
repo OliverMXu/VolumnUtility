@@ -1,0 +1,19 @@
+﻿<Window x:Class="VolumnUtility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VolumnUtility"
+        mc:Ignorable="d"
+        Title="Alt + F4 关闭" Height="130" Width="50" WindowStyle="None" Background="Transparent" AllowsTransparency="True"
+        Topmost="True" ShowInTaskbar="False" ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Border ClipToBounds="True">
+        <Grid Name="gd" Background="#44000000" MouseDown="gd_MouseDown">
+            <Grid Name="currGd" VerticalAlignment="Bottom" Background="#AAFFFFFF"/>
+            <Grid Name="currVolumnGd" VerticalAlignment="Top" Background="#77000000" Height="20" Opacity="0">
+                <TextBlock Name="tbCurrVolumn" TextAlignment="Center" VerticalAlignment="Center" Text="55" Foreground="White" FontSize="12" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

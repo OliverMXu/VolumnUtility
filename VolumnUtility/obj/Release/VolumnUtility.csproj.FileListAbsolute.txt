@@ -1,0 +1,15 @@
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\bin\Release\VolumnUtility.exe.config
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\bin\Release\VolumnUtility.exe
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\bin\Release\VolumnUtility.pdb
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.csprojAssemblyReference.cache
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\MainWindow.g.cs
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\App.g.cs
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility_MarkupCompile.cache
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility_MarkupCompile.lref
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\MainWindow.baml
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.g.resources
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.Properties.Resources.resources
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.csproj.GenerateResource.cache
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.csproj.CoreCompileInputs.cache
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.exe
+D:\Projects\VisualStudio\VolumnUtility\VolumnUtility\obj\Release\VolumnUtility.pdb
