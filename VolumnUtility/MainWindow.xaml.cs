@@ -107,8 +107,7 @@ namespace VolumnUtility
             SystemVolume.SetMasterVolumeMute(muted);
             if (muted)
             {
-                tbCurrVolumn.Text = "0";
-                HeightTo(0);
+                MuteVolume();
             }
             else
             {
@@ -136,6 +135,11 @@ namespace VolumnUtility
 
                 }
             }
+            bool? isMuted = SystemVolume.GetMasterVolumeMute();
+            if (isMuted != null && isMuted.Value)
+            {
+                MuteVolume();
+            }
             currGd.Height = gd.ActualHeight * SystemVolume.GetMasterVolume() / 100;
         }
 
@@ -150,8 +154,7 @@ namespace VolumnUtility
                 SystemVolume.SetMasterVolumeMute(muted);
                 if (muted)
                 {
-                    tbCurrVolumn.Text = "0";
-                    HeightTo(0);
+                    MuteVolume();
                 }
                 else
                 {
@@ -186,8 +189,12 @@ namespace VolumnUtility
             opacityAnim.Duration = new Duration(TimeSpan.FromMilliseconds(300));
             opacityAnim.Completed += OpacityAnim_Completed;
             currVolumnGd.BeginAnimation(Grid.OpacityProperty, opacityAnim);
+        }
 
-
+        private void MuteVolume()
+        {
+            tbCurrVolumn.Text = "X";
+            HeightTo(0);
         }
 
         private void OpacityAnim_Completed(object sender, EventArgs e)

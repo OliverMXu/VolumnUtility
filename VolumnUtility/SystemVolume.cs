@@ -60,6 +60,26 @@ namespace VolumnUtility
             }
         }
 
+        public static bool? GetMasterVolumeMute()
+        {
+            IAudioEndpointVolume masterVol = null;
+            try
+            {
+                masterVol = GetMasterVolumeObject();
+                if (masterVol == null)
+                    return null;
+
+                bool isMuted;
+                masterVol.GetMute(out isMuted);
+                return isMuted;
+            }
+            finally
+            {
+                if (masterVol != null)
+                    Marshal.ReleaseComObject(masterVol);
+            }
+        }
+
         private static IAudioEndpointVolume GetMasterVolumeObject()
         {
             IMMDeviceEnumerator deviceEnumerator = null;

@@ -16,12 +16,12 @@
         "Entry"
         {
         "MsmKey" = "8:_2804CAF533C038FDD90562AF9A73AB9E"
-        "OwnerKey" = "8:_961424CB4F0141308B8EC04A8DF55E1D"
+        "OwnerKey" = "8:_54B408CE6C284C01A970D469EB2D6280"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_961424CB4F0141308B8EC04A8DF55E1D"
+        "MsmKey" = "8:_54B408CE6C284C01A970D469EB2D6280"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,7 +34,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_961424CB4F0141308B8EC04A8DF55E1D"
+        "OwnerKey" = "8:_54B408CE6C284C01A970D469EB2D6280"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -329,7 +329,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D83C9EEA911E40BE848DA86249FCCFF4"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8CDBA24E4E5A443C8CABBEBCCD335135"
             {
             "Name" = "8:VolumnUtility"
             "Arguments" = "8:"
@@ -337,10 +337,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_961424CB4F0141308B8EC04A8DF55E1D"
+            "Target" = "8:_54B408CE6C284C01A970D469EB2D6280"
             "Folder" = "8:_5121777006C743D59DFD13256FCF7E7A"
             "WorkingFolder" = "8:_51E8EC3E638848B3AAEAADACE10939AB"
-            "Icon" = "8:_961424CB4F0141308B8EC04A8DF55E1D"
+            "Icon" = "8:_54B408CE6C284C01A970D469EB2D6280"
             "Feature" = "8:"
             }
         }
@@ -742,7 +742,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_961424CB4F0141308B8EC04A8DF55E1D"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_54B408CE6C284C01A970D469EB2D6280"
             {
             "SourcePath" = "8:..\\VolumnUtility\\obj\\Release\\VolumnUtility.exe"
             "TargetName" = "8:"
