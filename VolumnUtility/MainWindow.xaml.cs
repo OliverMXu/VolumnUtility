@@ -102,17 +102,21 @@ namespace VolumnUtility
 
         private void NotifyIcon_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            mutedVolume = SystemVolume.GetMasterVolume();
-            muted = !muted;
-            SystemVolume.SetMasterVolumeMute(muted);
-            if (muted)
+            bool? muted = SystemVolume.GetMasterVolumeMute();
+            if (muted != null)
             {
-                MuteVolume();
-            }
-            else
-            {
-                tbCurrVolumn.Text = ((int)mutedVolume).ToString();
-                HeightTo(mutedVolume / 100 * gd.ActualHeight);
+                if (muted.Value)
+                {
+                    SystemVolume.SetMasterVolumeMute(false);
+                    float volume = SystemVolume.GetMasterVolume();
+                    tbCurrVolumn.Text = ((int)volume).ToString();
+                    HeightTo(volume / 100 * gd.ActualHeight);
+                }
+                else
+                {
+                    SystemVolume.SetMasterVolumeMute(true);
+                    MuteVolume();
+                }
             }
         }
 
@@ -143,31 +147,32 @@ namespace VolumnUtility
             currGd.Height = gd.ActualHeight * SystemVolume.GetMasterVolume() / 100;
         }
 
-        private bool muted = false;
-        private float mutedVolume = 0;
         private void gd_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
+            bool? muted = SystemVolume.GetMasterVolumeMute();
             if (e.ClickCount == 2)
             {
-                mutedVolume = SystemVolume.GetMasterVolume();
-                muted = !muted;
-                SystemVolume.SetMasterVolumeMute(muted);
-                if (muted)
+                if (muted != null)
                 {
-                    MuteVolume();
-                }
-                else
-                {
-                    tbCurrVolumn.Text = ((int)mutedVolume).ToString();
-                    HeightTo(mutedVolume / 100 * gd.ActualHeight);
+                    if (muted.Value)
+                    {
+                        SystemVolume.SetMasterVolumeMute(false);
+                        float volume = SystemVolume.GetMasterVolume();
+                        tbCurrVolumn.Text = ((int)volume).ToString();
+                        HeightTo(volume / 100 * gd.ActualHeight);
+                    }
+                    else
+                    {
+                        SystemVolume.SetMasterVolumeMute(true);
+                        MuteVolume();
+                    }
                 }
                 e.Handled = true;
                 return;
             }
-            if (muted)
+            if (muted.Value)
             {
-                muted = !muted;
-                SystemVolume.SetMasterVolumeMute(muted);
+                SystemVolume.SetMasterVolumeMute(false);
             }
             System.Windows.Point p = e.GetPosition(gd);
             float volumn = (float)((gd.ActualHeight - p.Y) / gd.ActualHeight * 100);
